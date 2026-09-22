@@ -209,7 +209,7 @@
       <li><a href="mailto:prabuddha.prakash@rutgers.edu">Email</a></li>
       <li><a href="https://scholar.google.com/citations?user=K5rEKDoAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a></li>
       <li><a href="https://www.linkedin.com/in/prabuddha-prakash-31364511a/" target="_blank" rel="noopener">LinkedIn</a></li>
-      <li><a href="files/CV_Prakash.pdf" data-cv="view" target="_blank" rel="noopener">CV (PDF)</a></li>
+      <li><a href="CV_2026_Prakash.pdf" data-cv="view" target="_blank" rel="noopener">CV (PDF)</a></li>
     </ul>
   </div>
   <div class="tabbar">
@@ -362,7 +362,7 @@
     <aside class="aside" aria-label="Research documents and profiles">
       <section>
         <h3>Research statement</h3>
-        <a class="btn" href="files/Research_Statement_Prakash.pdf" target="_blank" rel="noopener">Research statement (PDF)</a>
+        <a class="btn" href="Research_Statement_Prakash.pdf" target="_blank" rel="noopener">Research statement (PDF)</a>
       </section>
       <!-- EDIT: GOOGLE SCHOLAR -->
       <section>
@@ -451,8 +451,8 @@
       <section>
         <h3>Documents</h3>
         <ul>
-          <li><a href="files/Teaching_Statement_Prakash.pdf" target="_blank" rel="noopener">Teaching statement (PDF)</a></li>
-          <li><a href="files/Teaching_Evaluations_Spring2026_Rutgers.pdf" target="_blank" rel="noopener">Full evaluation report, Spring 2026 (PDF)</a></li>
+          <li><a href="Teaching_Statement_Prakash.pdf" target="_blank" rel="noopener">Teaching statement (PDF)</a></li>
+          <li><a href="TeachEvals_Spring2026_Prakash.pdf" target="_blank" rel="noopener">Full evaluation report, Spring 2026 (PDF)</a></li>
         </ul>
       </section>
     </aside>
@@ -493,8 +493,8 @@
     <div class="cv-side">
       <section>
         <div class="btnrow">
-          <a class="btn primary" href="files/CV_Prakash.pdf" data-cv="view" target="_blank" rel="noopener">Open CV</a>
-          <a class="btn" href="files/CV_Prakash.pdf" data-cv="download" download>Download PDF</a>
+          <a class="btn primary" href="CV_2026_Prakash.pdf" data-cv="view" target="_blank" rel="noopener">Open CV</a>
+          <a class="btn" href="CV_2026_Prakash.pdf" data-cv="download" download>Download PDF</a>
         </div>
         <!-- EDIT: date of your latest CV -->
         <p class="small muted" style="margin:12px 0 0">Last updated September 2026</p>
@@ -526,7 +526,7 @@
       </section>
     </div>
     <div id="cv-viewer">
-      <iframe class="cvframe" src="files/CV_Prakash.pdf" data-cv="embed" title="Curriculum vitae of Prabuddha Prakash" loading="lazy"></iframe>
+      <iframe class="cvframe" src="CV_2026_Prakash.pdf" data-cv="embed" title="Curriculum vitae of Prabuddha Prakash" loading="lazy"></iframe>
     </div>
   </div>
 </section>
@@ -544,14 +544,14 @@
 <script>
   /* =====================================================================
      EDIT: CV LINK
-     Option A (default): keep "files/CV_Prakash.pdf" and replace that file
+     Option A (default): keep "CV_2026_Prakash.pdf" and replace that file
        on GitHub whenever your CV changes (upload a file with the same name).
      Option B: paste your Google Drive share link between the quotes, e.g.
        "https://drive.google.com/file/d/XXXXXXXX/view?usp=sharing"
        Then update the CV in Drive with "Manage versions" > "Upload new
        version" and the website always shows the latest one.
      ===================================================================== */
-  var CV_URL = "files/CV_Prakash.pdf";
+  var CV_URL = "CV_2026_Prakash.pdf";
 
   (function () {
     // ---- CV links: works with a PDF file, a Google Drive link, or any other link
@@ -571,10 +571,25 @@
       if (kind === 'view') el.href = view;
       if (kind === 'download') { if (download) el.href = download; else el.remove(); }
       if (kind === 'embed') {
-        if (embed) el.src = embed;
-        else el.outerHTML = '<p class="cvfallback">Use the Open CV button to view the latest version.</p>';
+        if (!embed) {
+          el.outerHTML = '<p class="cvfallback">Use the Open CV button to view the latest version.</p>';
+        } else if (navigator.pdfViewerEnabled === false) {
+          // Phones and some browsers cannot show a PDF inside a page
+          el.outerHTML = '<p class="cvfallback">This browser cannot display the CV inside the page. Use the Open CV button above to view it.</p>';
+        } else {
+          el.src = embed;
+        }
       }
     });
+
+    // If the CV file is stored on this site, check that it exists and say so clearly if not
+    if (!m && /\.pdf(\?|#|$)/i.test(CV_URL) && !/^https?:/i.test(CV_URL) && window.fetch) {
+      fetch(CV_URL, { method: 'HEAD', cache: 'no-store' }).then(function (r) {
+        if (r.ok) return;
+        var box = document.getElementById('cv-viewer');
+        if (box) box.innerHTML = '<p class="cvfallback">CV file not found. The site looks for <b>' + CV_URL + '</b> (the name must match exactly, including capital letters).</p>';
+      }).catch(function () {});
+    }
 
     // ---- Tabs: one section at a time, with working back button and links like #research
     var ids = ['home', 'research', 'teaching', 'policy', 'cv'];
