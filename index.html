@@ -141,6 +141,10 @@
   /* ---------- CV ---------- */
   .cvgrid { display: grid; grid-template-columns: 300px minmax(0, 1fr); gap: 48px; align-items: start; }
   .cvframe { width: 100%; height: 82vh; min-height: 560px; border: 1px solid var(--rule); border-radius: 4px; background: #FFFFFF; }
+  .cvpage { position: relative; margin: 0 0 14px; border: 1px solid var(--rule); background: #FFFFFF; }
+  .cvpage canvas { display: block; width: 100%; height: auto; }
+  .cvpage a { position: absolute; display: block; }
+  .cvpage a:hover { background: rgba(26, 75, 140, 0.12); }
   .cvfallback { padding: 28px; border: 1px dashed var(--rule); border-radius: 4px; font-family: var(--sans); font-size: var(--fs-meta); color: var(--muted); }
   .cv-side { font-size: var(--fs-body); line-height: 1.55; }
   .cv-side section { padding: 18px 0; border-top: 1px solid var(--rule); }
@@ -208,6 +212,7 @@
     <ul class="quicklinks" aria-label="Contact and profiles">
       <li><a href="mailto:prabuddha.prakash@rutgers.edu">Email</a></li>
       <li><a href="https://scholar.google.com/citations?user=K5rEKDoAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a></li>
+      <li><a href="https://orcid.org/0009-0005-0214-2234" target="_blank" rel="noopener">ORCID</a></li>
       <li><a href="https://www.linkedin.com/in/prabuddha-prakash-31364511a/" target="_blank" rel="noopener">LinkedIn</a></li>
       <li><a href="CV_2026_Prakash.pdf" data-cv="view" target="_blank" rel="noopener">CV (PDF)</a></li>
     </ul>
@@ -306,56 +311,60 @@
             <p>Using the 2023 Youth Risk Behavior Survey, this paper studies how the frequency of social media checking relates to high school students' perceptions of their weight and their weight-control behaviors.</p>
           </details>
         </li>
+        <li class="paper">
+          <p class="t"><a href="https://doi.org/10.1016/j.ssaho.2026.103982" target="_blank" rel="noopener">Social Media Use Frequency and Sexual Behavior Among U.S. High School Students</a></p>
+          <p class="who">A. Teotia, F. Beltran-Silva, and <b>P. Prakash</b></p>
+          <p class="where"><em>Social Sciences &amp; Humanities Open</em>, 2026. <a href="https://doi.org/10.1016/j.ssaho.2026.103982" target="_blank" rel="noopener">doi:10.1016/j.ssaho.2026.103982</a></p>
+        </li>
       </ol>
 
 
       <!-- EDIT: JOB MARKET PAPER (title, coauthors, status, abstract, links) -->
       <h2>Job market paper</h2>
       <article class="paper jmp">
-        <p class="t"><a href="http://dx.doi.org/10.2139/ssrn.6517099" target="_blank" rel="noopener">Rare Earth Element Security Premiums</a></p>
+        <p class="t"><a href="https://doi.org/10.1016/j.reseneeco.2026.101605" target="_blank" rel="noopener">Rare Earth Element Security Premiums</a></p>
         <p class="who">with Charles Sims</p>
-        <p class="where"><span class="status">Revise and resubmit</span> <em>Resource and Energy Economics</em></p>
+        <p class="where"><span class="status">Published</span> <em>Resource and Energy Economics</em>, 2026. <a href="https://doi.org/10.1016/j.reseneeco.2026.101605" target="_blank" rel="noopener">doi:10.1016/j.reseneeco.2026.101605</a></p>
         <p class="abstract">Importing economies face rare earth supply disruptions whose costs private buyers do not weigh when they decide how much to import. Using a model of expected domestic welfare, we show that each additional unit of rare earth imports carries a social cost on top of its private cost. This security premium provides an economic rationale for policies that reduce import dependence. We estimate these premiums for G10 economies using rare earth metal and magnet trade data from 1995 to 2023. The premiums vary widely across countries, from $2.39 to $7.71 per kg for rare earth metals and from $0.46 to $30.36 per kg for magnets. For the United States, the premium on rare earth metals is larger than the premium on imported oil, and premiums may be substantially larger when importers are imperfectly informed about the supply risks they face.</p>
         <div class="btnrow">
-          <a class="btn primary" href="http://dx.doi.org/10.2139/ssrn.6517099" target="_blank" rel="noopener">Read the paper (SSRN)</a>
+          <a class="btn primary" href="https://doi.org/10.1016/j.reseneeco.2026.101605" target="_blank" rel="noopener">Read the paper</a>
         </div>
       </article>
 
       <!-- EDIT: REVISE AND RESUBMIT -->
       <h2>Revise and resubmit</h2>
       <div class="paper">
+        <p class="t">Operational AI for Workforce Management in U.S. Inpatient Psychiatric Facilities</p>
+        <p class="who">A. Teotia, Z. Henley, and <b>P. Prakash</b></p>
+        <p class="where"><span class="status">Revise and resubmit</span> <em>Journal of Behavioral Health Services &amp; Research</em></p>
+      </div>
+      <div class="paper">
         <p class="t">Scrolling into Despair: High-Frequency Social Media Use, Persistent Hopelessness, and Suicide Risk Among U.S. Adolescents</p>
         <p class="who">A. Teotia, <b>P. Prakash</b>, M. Breitzig, and F. Beltran-Silva</p>
         <p class="where"><span class="status">Revise and resubmit</span> <em>Psychiatry Research</em></p>
       </div>
       <div class="paper">
-        <p class="t">Social Media Use Frequency and Sexual Behavior Among U.S. High School Students</p>
-        <p class="who">A. Teotia, F. Beltran-Silva, and <b>P. Prakash</b></p>
-        <p class="where"><span class="status">Revise and resubmit</span> <em>Social Sciences &amp; Humanities Open</em></p>
+        <p class="t">Operational AI in U.S. Long-Term Acute Care Hospitals: Adoption Trends and Organizational Predictors, 2021–2024</p>
+        <p class="who">A. Teotia, Z. Henley, P. Monica, and <b>P. Prakash</b></p>
+        <p class="where"><span class="status">Revise and resubmit</span> <em>Journal of the American Medical Directors Association</em></p>
       </div>
 
       <!-- EDIT: UNDER REVIEW
-           Replace these working titles with your exact titles and add coauthors.
            Convention: say "Under review" but do not name the journal. -->
       <h2>Under review</h2>
       <div class="compact">
       <div class="paper">
-        <p class="t">Recreational Marijuana Legalization and Adolescent Mental Health</p>
-        <!-- <p class="who">with ...</p> -->
+        <p class="t">Dynamic Effects of Medicaid Expansion on Long-Run Access to Care for Low-Income Adults with Chronic Conditions</p>
+        <p class="who">A. Teotia, F. Beltran-Silva, and <b>P. Prakash</b></p>
       </div>
       <div class="paper">
-        <p class="t">AI Adoption in U.S. Inpatient Psychiatric Hospitals</p>
+        <p class="t">Too High to Text: Cannabis Dispensary Access and Adolescent Driving Risk</p>
+        <p class="who">A. Teotia, <b>P. Prakash</b>, K. Hymel, and F. Beltran-Silva</p>
       </div>
       <div class="paper">
-        <p class="t">AI Adoption in U.S. Long-Term Care Facilities</p>
+        <p class="t">Adolescent Mental Health Responses to Recreational Marijuana Legalization: Evidence of Sex-Specific Heterogeneity</p>
+        <p class="who">A. Teotia, <b>P. Prakash</b>, and F. Beltran-Silva</p>
       </div>
-      </div>
-
-      <!-- EDIT: WORK IN PROGRESS -->
-      <h2>Work in progress</h2>
-      <div class="paper">
-        <p class="t">Medicaid Expansion and Long-Run Access to Care for Low-Income Adults with Chronic Conditions</p>
-        <p class="note">An event-study design that exploits the staggered adoption of Medicaid expansion across states and lets the effects evolve over time.</p>
       </div>
     </div>
 
@@ -369,6 +378,11 @@
         <h3>Google Scholar</h3>
         <p>My full publication list and citation counts are kept current on Google Scholar.</p>
         <a class="btn" href="https://scholar.google.com/citations?user=K5rEKDoAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar profile</a>
+      </section>
+      <!-- EDIT: ORCID -->
+      <section>
+        <h3>ORCID</h3>
+        <a class="btn" href="https://orcid.org/0009-0005-0214-2234" target="_blank" rel="noopener">orcid.org/0009-0005-0214-2234</a>
       </section>
     </aside>
   </div>
@@ -497,7 +511,7 @@
           <a class="btn" href="CV_2026_Prakash.pdf" data-cv="download" download>Download PDF</a>
         </div>
         <!-- EDIT: date of your latest CV -->
-        <p class="small muted" style="margin:12px 0 0">Last updated September 2026</p>
+        <p class="small muted" style="margin:12px 0 0">Last updated November 2026</p>
       </section>
       <section>
         <h3>Current positions</h3>
@@ -519,14 +533,14 @@
       <section>
         <h3>References</h3>
         <ul>
-          <li>Charles Sims<span class="detail">Professor of Economics, University of Tennessee</span><a href="mailto:cbsims@utk.edu">cbsims@utk.edu</a></li>
+          <li>Charles Sims<span class="detail">Tennessee Valley Authority (TVA) Distinguished Professor of Economics, University of Tennessee</span><a href="mailto:cbsims@utk.edu">cbsims@utk.edu</a></li>
           <li>Ketki Sheth<span class="detail">Associate Professor of Economics, University of Tennessee</span><a href="mailto:ksheth2@utk.edu">ksheth2@utk.edu</a></li>
           <li>Arjun Teotia<span class="detail">Assistant Professor, Michigan State University; Assistant Scientist, Henry Ford Health</span><a href="mailto:ateotia1@hfhs.org">ateotia1@hfhs.org</a><br><a href="mailto:teotiaar@msu.edu">teotiaar@msu.edu</a></li>
         </ul>
       </section>
     </div>
     <div id="cv-viewer">
-      <iframe class="cvframe" src="CV_2026_Prakash.pdf" data-cv="embed" title="Curriculum vitae of Prabuddha Prakash" loading="lazy"></iframe>
+      <noscript><p class="cvfallback">Use the Open CV button to view the CV.</p></noscript>
     </div>
   </div>
 </section>
@@ -571,25 +585,81 @@
       var kind = el.getAttribute('data-cv');
       if (kind === 'view') el.href = view;
       if (kind === 'download') { if (download) el.href = download; else el.remove(); }
-      if (kind === 'embed') {
-        if (!embed) {
-          el.outerHTML = '<p class="cvfallback">Use the Open CV button to view the latest version.</p>';
-        } else if (navigator.pdfViewerEnabled === false) {
-          // Phones and some browsers cannot show a PDF inside a page
-          el.outerHTML = '<p class="cvfallback">This browser cannot display the CV inside the page. Use the Open CV button above to view it.</p>';
-        } else {
-          el.src = embed;
-        }
-      }
     });
 
-    // If the CV file is stored on this site, check that it exists and say so clearly if not
-    if (!m && /\.pdf(\?|#|$)/i.test(CV_URL) && !/^https?:/i.test(CV_URL) && window.fetch) {
-      fetch(CV_URL, { method: 'HEAD', cache: 'no-store' }).then(function (r) {
-        if (r.ok) return;
-        var box = document.getElementById('cv-viewer');
-        if (box) box.innerHTML = '<p class="cvfallback">CV file not found. The site looks for <b>' + CV_URL + '</b> (the name must match exactly, including capital letters).</p>';
-      }).catch(function () {});
+    // ---- CV viewer. The CV pages are drawn directly inside the page (PDF.js, the files
+    //      pdf.min.js and pdf.worker.min.js), so this does not depend on the browser's own PDF
+    //      viewer. If those two files are missing, it falls back to the browser's viewer,
+    //      and if that is unavailable, to a message pointing to the Open CV button.
+    var cvStarted = false;
+    function cvMessage(html) {
+      document.getElementById('cv-viewer').innerHTML = '<p class="cvfallback">' + html + '</p>';
+    }
+    function cvNative() {
+      var box = document.getElementById('cv-viewer');
+      if (!embed) return cvMessage('Use the Open CV button to view the latest version.');
+      if (navigator.pdfViewerEnabled === false) return cvMessage('This browser cannot display the CV inside the page. Use the Open CV button to view it.');
+      box.innerHTML = '';
+      var f = document.createElement('iframe');
+      f.className = 'cvframe'; f.title = 'Curriculum vitae of Prabuddha Prakash'; f.src = embed;
+      box.appendChild(f);
+    }
+    function cvDraw(pdf, box) {
+      var width = Math.min(box.clientWidth || 800, 900);
+      var dpr = Math.min(window.devicePixelRatio || 1, 2);
+      box.innerHTML = '';
+      var chain = Promise.resolve();
+      for (var n = 1; n <= pdf.numPages; n++) (function (n) {
+        chain = chain.then(function () { return pdf.getPage(n); }).then(function (page) {
+          var base = page.getViewport({ scale: 1 });
+          var vp = page.getViewport({ scale: (width * dpr) / base.width });
+          var wrap = document.createElement('div'); wrap.className = 'cvpage';
+          var cv = document.createElement('canvas');
+          cv.width = Math.floor(vp.width); cv.height = Math.floor(vp.height);
+          wrap.appendChild(cv); box.appendChild(wrap);
+          return page.render({ canvasContext: cv.getContext('2d'), viewport: vp }).promise
+            .then(function () { return page.getAnnotations(); })
+            .then(function (anns) {
+              // keep the links in the CV (DOIs, emails) clickable
+              anns.forEach(function (an) {
+                if (an.subtype !== 'Link' || !an.url || !/^(https?:|mailto:)/i.test(an.url)) return;
+                var r = vp.convertToViewportRectangle(an.rect);
+                var x = Math.min(r[0], r[2]), y = Math.min(r[1], r[3]);
+                var w = Math.abs(r[2] - r[0]), h = Math.abs(r[3] - r[1]);
+                var l = document.createElement('a');
+                l.href = an.url; l.target = '_blank'; l.rel = 'noopener';
+                l.style.left = (x / vp.width * 100) + '%';
+                l.style.top = (y / vp.height * 100) + '%';
+                l.style.width = (w / vp.width * 100) + '%';
+                l.style.height = (h / vp.height * 100) + '%';
+                wrap.appendChild(l);
+              });
+            });
+        });
+      })(n);
+      return chain;
+    }
+    function cvLoad() {
+      if (cvStarted) return;
+      cvStarted = true;
+      var box = document.getElementById('cv-viewer');
+      if (m || !/\.pdf(\?|#|$)/i.test(CV_URL)) return cvNative();   // Google Drive or other link
+      cvMessage('Loading CV…');
+      var sc = document.createElement('script');
+      sc.src = 'pdf.min.js';
+      sc.onerror = cvNative;
+      sc.onload = function () {
+        try {
+          window.pdfjsLib.GlobalWorkerOptions.workerSrc = 'pdf.worker.min.js';
+          window.pdfjsLib.getDocument(embed).promise
+            .then(function (pdf) { return cvDraw(pdf, box); })
+            .catch(function (err) {
+              if (err && err.name === 'MissingPDFException') cvMessage('CV file not found. The site looks for <b>' + CV_URL + '</b> (the name must match exactly, including capital letters).');
+              else cvNative();
+            });
+        } catch (e) { cvNative(); }
+      };
+      document.head.appendChild(sc);
     }
 
     // ---- Always load the newest version of every PDF stored on this site
@@ -610,6 +680,7 @@
         t.tabIndex = on ? 0 : -1;
       });
       document.title = (id === 'home' ? '' : document.getElementById('tab-' + id).textContent + ' | ') + 'Prabuddha Prakash';
+      if (id === 'cv') cvLoad();
       if (focus) window.scrollTo(0, 0);
     }
     window.addEventListener('hashchange', function () { show(location.hash.slice(1), true); });
